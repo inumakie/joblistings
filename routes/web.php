@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\ListingController;
+use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Listing;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ListingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,10 +25,34 @@ Route::get('/listings/create', [ListingController::class, 'create']);
 // Store new listing
 Route::post('/listings', [ListingController::class, 'store']);
 
+// Show edit form
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
+
+// Submit edit of job posting
+Route::put('/listings/{listing}', [ListingController::class, 'update']);
+
+// Delete job posting
+Route::delete('listings/{listing}', [ListingController::class, 'destroy']);
 
 // Single listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
+// Show register form
+Route::get('/register', [UserController::class, 'create']);
+
+// USER REGISTRATION AND LOGIN
+
+// Register user
+Route::post('/users', [UserController::class, 'store']);
+
+// Log out
+Route::post('/logout', [UserController::class, 'logout']);
+
+// Show login form
+Route::get('/login', [UserController::class, 'login']);
+
+// Login user
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 
 
