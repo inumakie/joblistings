@@ -16,43 +16,45 @@ use App\Http\Controllers\ListingController;
 |
 */
 
-// All listings
+// Show all jobs
 Route::get('/', [ListingController::class, 'index']);
 
-// Create form
-Route::get('/listings/create', [ListingController::class, 'create']);
+// Create job - form
+Route::get('/listings/create', [ListingController::class, 'create'])->middleware('auth');
 
-// Store new listing
-Route::post('/listings', [ListingController::class, 'store']);
+// Store new job
+Route::post('/listings', [ListingController::class, 'store'])->middleware('auth');
 
-// Show edit form
-Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
+// Edit job - form
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->middleware('auth');
 
 // Submit edit of job posting
-Route::put('/listings/{listing}', [ListingController::class, 'update']);
+Route::put('/listings/{listing}', [ListingController::class, 'update'])->middleware('auth');
 
 // Delete job posting
-Route::delete('listings/{listing}', [ListingController::class, 'destroy']);
+Route::delete('listings/{listing}', [ListingController::class, 'destroy'])->middleware('auth');
 
-// Single listing
+// Single job posting
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
-// Show register form
-Route::get('/register', [UserController::class, 'create']);
+
 
 // USER REGISTRATION AND LOGIN
+
+// Show register form
+Route::get('/register', [UserController::class, 'create'])->middleware('guest');
 
 // Register user
 Route::post('/users', [UserController::class, 'store']);
 
-// Log out
-Route::post('/logout', [UserController::class, 'logout']);
-
 // Show login form
-Route::get('/login', [UserController::class, 'login']);
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 
 // Login user
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+// Log out
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
 
 
