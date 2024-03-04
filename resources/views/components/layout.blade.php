@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="images/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('/styles.css') }}">
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -25,7 +26,45 @@
                 },
             };
         </script>
-        <title>LaraGigs | Find Laravel Jobs & Projects</title>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Define the texts to be displayed
+        var texts = ["Find your next programming job.", "Find your next programmer."];
+        var textIndex = 0;
+        var letterIndex = 0;
+        var delay = 50; // Delay between each letter in milliseconds
+
+        var textElement = document.getElementById('typing');
+
+        function typeText() {
+            if (letterIndex < texts[textIndex].length) {
+                textElement.innerHTML += texts[textIndex].charAt(letterIndex);
+                letterIndex++;
+                setTimeout(typeText, delay);
+            } else {
+                textElement.classList.add('fadeOut'); // Add fadeOut class to trigger CSS animation
+                setTimeout(eraseText, 2000); // Delay before erasing text
+            }
+        }
+
+        function eraseText() {
+            textElement.innerHTML = ""; // Clear the text
+            textElement.classList.remove('fadeOut'); // Remove fadeOut class
+            textIndex = (textIndex + 1) % texts.length; // Switch to the next text
+            letterIndex = 0;
+            setTimeout(typeText, delay); // Start typing the next text
+        }
+
+        // Start typing the first text
+        setTimeout(typeText, 1000); // Delay before starting animation
+    });
+</script>
+
+
+
+
+        <title>DevGigs | Find your next programming job </title>
     </head>
     <body class="mb-48">
         <nav class="flex justify-between items-center mb-4">
@@ -74,18 +113,6 @@
         <main>
             {{$slot}}
         </main>
-
-        <footer
-            class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center"
-        >
-            <p class="ml-2">Copyright &copy; 2022, All Rights reserved</p>
-
-            <a
-                href="/listings/create"
-                class="absolute top-1/3 right-10 bg-black text-white py-2 px-5"
-                >Post Job</a
-            >
-        </footer>
 
         <x-flash-message/>
     </body>
