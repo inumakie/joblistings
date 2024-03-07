@@ -21,7 +21,7 @@
     <footer
     class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-purple-900 text-white h-16 mt-24 opacity-90 md:justify-center"
 >
-    <p class="ml-2">Copyright &copy; 2024, All Rights reserved</p>
+    <p class="ml-2">DevGigs &copy; 2024, All Rights reserved</p>
 
     <a
         href="/listings/create"

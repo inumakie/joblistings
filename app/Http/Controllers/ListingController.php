@@ -43,6 +43,12 @@ class ListingController extends Controller
             'description' => 'required'
         ]);
 
+        // Check if the website URL doesn't start with 'http://' or 'https://'
+        if (strpos($formFields['website'], 'http://') !== 0 && strpos($formFields['website'], 'https://') !== 0) {
+            // Prepend 'http://' to the URL
+            $formFields['website'] = 'http://' . $formFields['website'];
+        }
+
         if ($request->hasFile('logo')) {
             $formFields['logo'] = $request->file('logo')->store('logos', 'public');
         }
