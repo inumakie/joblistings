@@ -39,7 +39,7 @@
                         <form method="POST" action="/listings/{{$listing->id}}">
                             @method('DELETE')
                             @csrf
-                            <button class="text-red-500">
+                            <button class="text-purple-800 hover:text-laravel">
                                 <i class="fa-solid fa-trash"></i>
                                 Delete
                             </button>

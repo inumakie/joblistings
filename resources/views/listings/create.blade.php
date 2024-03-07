@@ -1,5 +1,5 @@
 <x-layout>
-    <x-card class="p-10 max-w-lg mx-auto mt-24">
+    <x-card class="p-10 max-w-lg mx-auto mt-24 border-purple-300">
         <header class="text-center">
             <h2 class="text-2xl font-bold uppercase mb-1">
                 Create a Gig
@@ -17,7 +17,7 @@
                 >
                 <input
                     type="text"
-                    class="border border-gray-200 rounded p-2 w-full"
+                    class="border border-purple-300 rounded p-2 w-full"
                     name="company"
                     value="{{old('company')}}"
                 />
@@ -33,7 +33,7 @@
                 >
                 <input
                     type="text"
-                    class="border border-gray-200 rounded p-2 w-full"
+                    class="border border-purple-300 rounded p-2 w-full"
                     name="title"
                     placeholder="Example: Senior Laravel Developer"
                     value="{{old('title')}}"
@@ -52,7 +52,7 @@
                 >
                 <input
                     type="text"
-                    class="border border-gray-200 rounded p-2 w-full"
+                    class="border border-purple-300 rounded p-2 w-full"
                     name="location"
                     placeholder="Example: Remote, Boston MA, etc"
                     value="{{old('location')}}"
@@ -69,7 +69,7 @@
                 >
                 <input
                     type="text"
-                    class="border border-gray-200 rounded p-2 w-full"
+                    class="border border-purple-300 rounded p-2 w-full"
                     name="email"
                     value="{{old('email')}}"
                 />
@@ -85,7 +85,7 @@
                 </label>
                 <input
                     type="text"
-                    class="border border-gray-200 rounded p-2 w-full"
+                    class="border border-purple-300 rounded p-2 w-full"
                     name="website"
                     value="{{old('website')}}"
                 />
@@ -101,7 +101,7 @@
                 </label>
                 <input
                     type="text"
-                    class="border border-gray-200 rounded p-2 w-full"
+                    class="border border-purple-300 rounded p-2 w-full"
                     name="tags"
                     placeholder="Example: Laravel, Backend, Postgres, etc"
                     value="{{old('tags')}}"
@@ -118,7 +118,7 @@
                 </label>
                 <input
                     type="file"
-                    class="border border-gray-200 rounded p-2 w-full"
+                    class="border border-purple-300 rounded p-2 w-full"
                     name="logo"
                 />
 
@@ -132,7 +132,7 @@
                     Job Description
                 </label>
                 <textarea
-                    class="border border-gray-200 rounded p-2 w-full"
+                    class="border border-purple-300 rounded p-2 w-full"
                     name="description"
                     rows="10"
                     placeholder="Include tasks, requirements, salary, etc"
@@ -145,7 +145,7 @@
             </div>
     
             <div class="mb-6">
-                <button class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">
+                <button class="bg-purple-400 text-white rounded py-2 px-4 hover:bg-purple-800">
                     Create Gig
                 </button>
     

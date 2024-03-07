@@ -33,7 +33,7 @@
         var texts = ["Find your next programming job.", "Find your next programmer."];
         var textIndex = 0;
         var letterIndex = 0;
-        var delay = 50; // Delay between each letter in milliseconds
+        var delay = 80; // Delay between each letter in milliseconds
 
         var textElement = document.getElementById('typing');
 
@@ -68,17 +68,16 @@
     </head>
     <body class="mb-48">
         <nav class="flex justify-between items-center mb-4">
-            <a href="/"
-                ><img class="w-24" src="{{asset('images/logo.png')}}" alt="" class="logo"
-            /></a>
+            <a href="/" class='ml-2'
+                ><img class="w-24" src="{{asset('images/logo.png')}}" alt="" class="logo"/></a>
             <ul class="flex space-x-6 mr-6 text-lg">
 
                 @auth
                 <li>
-                    <span class="font-bold uppercase">Welcome, {{auth()->user()->name}}</span>
+                    <span class="">Welcome, {{auth()->user()->name}}</span>
                 </li>
                 <li>
-                    <a href="/listings/manage" class="hover:text-laravel"
+                    <a href="/listings/manage" class="hover:text-purple-800"
                         ><i class="fa-solid fa-gear"></i>
                         Manage listings</a
                     >
@@ -86,7 +85,7 @@
                 <li>
                     <form method="POST" action="/logout" class="inline">
                         @csrf
-                        <button type="submit">
+                        <button type="submit" class='hover:text-purple-800'>
                             <i class="fa-solid fa-door-closed"></i>
                             Logout
                         </button>
@@ -96,12 +95,12 @@
 
                 @else
                 <li>
-                    <a href="/register" class="hover:text-laravel"
+                    <a href="/register" class="hover:text-purple-800"
                         ><i class="fa-solid fa-user-plus"></i> Register</a
                     >
                 </li>
                 <li>
-                    <a href="/login" class="hover:text-laravel"
+                    <a href="/login" class="hover:text-purple-800"
                         ><i class="fa-solid fa-arrow-right-to-bracket"></i>
                         Login</a>
                 </li>

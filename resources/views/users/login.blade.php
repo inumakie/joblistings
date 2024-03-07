@@ -1,5 +1,5 @@
 <x-layout>
-    <x-card class="p-10 max-w-lg mx-auto mt-24">
+    <x-card class="p-10 max-w-lg mx-auto mt-24 border-purple-300">
         <header class="text-center">
             <h2 class="text-2xl font-bold uppercase mb-1">
                 Login
@@ -15,7 +15,7 @@
                 >
                 <input
                     type="email"
-                    class="border border-gray-200 rounded p-2 w-full"
+                    class="border border-purple-300 rounded p-2 w-full"
                     name="email"
                     value="{{old('email')}}"
                     autocomplete="off"
@@ -35,7 +35,7 @@
                 </label>
                 <input
                     type="password"
-                    class="border border-gray-200 rounded p-2 w-full"
+                    class="border border-purple-300 rounded p-2 w-full"
                     name="password"
                     value="{{old('password')}}"
                 />
@@ -47,7 +47,7 @@
             <div class="mb-6">
                 <button
                     type="submit"
-                    class="bg-laravel text-white rounded py-2 px-4 hover:bg-black"
+                    class="bg-purple-400 text-white rounded py-2 px-4 hover:bg-purple-800"
                 >
                     Login
                 </button>
@@ -56,7 +56,7 @@
             <div class="mt-8">
                 <p>
                     Don't have an account?
-                    <a href="/register" class="text-laravel"
+                    <a href="/register" class="text-purple-800"
                         >Register</a
                     >
                 </p>

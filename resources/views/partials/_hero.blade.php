@@ -12,9 +12,9 @@
         </p>
         <div>
             <a
-                href="register.html"
-                class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl uppercase mt-2 hover:text-black hover:border-black"
-                >Employers Sign-up here</a
+                href="/listings/create"
+                class="inline-block border-2 border-white text-white py-2 px-4 rounded-xl mt-2 hover:text-purple-800 hover:border-purple-800"
+                >post a job</a
             >
         </div>
     </div>
