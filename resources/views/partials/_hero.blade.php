@@ -5,8 +5,10 @@
     </div>
 
     <div class="z-10">
-        <h1 class="text-6xl font-bold uppercase text-white">
-            Dev<span class="text-black">Gigs</span>
+        <h1 class="text-6xl font-roboto uppercase text-white">
+            <span class="text-purple-900">&lt;</span>
+            Dev<span class="text-black font-thin">Gigs</span>
+            <span class="text-purple-900">/&gt;</span>
         </h1>
         <p class="text-2xl text-gray-200 font-bold my-4" id="typing">
         </p>

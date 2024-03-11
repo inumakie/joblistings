@@ -16,9 +16,10 @@
                     <td
                         class="px-4 py-8 border-t border-b border-gray-300 text-lg"
                     >
-                        <a href="show.html">
+                        <a href="/listings/{{$listing->id}}/edit">
                             {{$listing->title}}
                         </a>
+                        <p class="font-bold text-xs">{{$listing->company}}</p>
                     </td>
                     <td
                         class="px-4 py-8 border-t border-b border-gray-300 text-lg"
@@ -35,7 +36,7 @@
                     <td
                         class="px-4 py-8 border-t border-b border-gray-300 text-lg"
                     >
-                    <x-card class="mt-4 p-2 flex space-x-6">
+                    <div class="p-2 flex space-x-6">
                         <form method="POST" action="/listings/{{$listing->id}}">
                             @method('DELETE')
                             @csrf
@@ -44,7 +45,7 @@
                                 Delete
                             </button>
                         </form>
-                    </x-card>
+                    </div>
                     </td>
                 </tr>
                 @endforeach

@@ -51,7 +51,7 @@
                 </label>
                 <input
                     type="password"
-                    class="border border-purple-300 rounded p-2 w-full"
+                    class="password border border-purple-300 rounded p-2 w-full"
                     name="password"
                     value="{{old('password')}}"
                 />
@@ -60,7 +60,7 @@
                 @enderror
             </div>
 
-            <div class="mb-6">
+            <div class="mb-2">
                 <label
                     for="password_confirmation"
                     class="inline-block text-lg mb-2"
@@ -69,7 +69,7 @@
                 </label>
                 <input
                     type="password"
-                    class="border border-purple-300 rounded p-2 w-full"
+                    class="password border border-purple-300 rounded p-2 w-full"
                     name="password_confirmation"
                     value="{{old('password_confirmation')}}"
                 />
@@ -77,6 +77,10 @@
                 @error('password_confirmation')
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror
+            </div>
+            <div class="flex mb-6">
+                <input type='checkbox' id='showpwd' onclick="togglePasswordVisibility()"/>
+                <label for="showpwd" class="text-xs px-2">Show passwords</label>
             </div>
 
             <div class="mb-6">

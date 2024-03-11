@@ -33,12 +33,21 @@
                 >
                     Password
                 </label>
-                <input
-                    type="password"
-                    class="border border-purple-300 rounded p-2 w-full"
-                    name="password"
-                    value="{{old('password')}}"
-                />
+
+
+                    <div class="">
+                        <input
+                        type="password"
+                        class="password border border-purple-300 rounded p-2 w-full"
+                        name="password"
+                        value="{{old('password')}}"
+                        />
+                        <div class="flex mt-2">
+                            <input type='checkbox' id='showpwd' class="ml-1" onclick="togglePasswordVisibility()"/>
+                            <label for="showpwd" class="text-xs ml-2">Show password</label>
+                        </div>
+                    </div>
+
                 @error('password')
                     <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                 @enderror

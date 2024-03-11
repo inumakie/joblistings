@@ -5,6 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="images/favicon.ico" />
+
+        <!-- ROBOTO FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" type="text/css" href="{{ asset('/styles.css') }}">
         <link
             rel="stylesheet"
@@ -59,6 +65,24 @@
         // Start typing the first text
         setTimeout(typeText, 1000); // Delay before starting animation
     });
+</script>
+
+<script>
+    function togglePasswordVisibility() {
+        var passwordInputs = document.querySelectorAll('.password');
+        
+        // Convert NodeList to an array using Array.from
+        var passwordInputsArray = Array.from(passwordInputs);
+        
+        // Loop through each input element in the array
+        passwordInputsArray.forEach(function(input) {
+            if (input.type === 'password') {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        });
+    }
 </script>
 
 
