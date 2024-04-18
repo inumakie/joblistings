@@ -17,13 +17,13 @@
     </div>
 
     <footer
-    class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-purple-900 text-white h-16 mt-24 opacity-90 md:justify-center"
+    class="fixed bottom-0 left-0 w-full flex flex-col sm:flex-row items-center justify-start font-bold bg-purple-900 text-white h-24 sm:h-16 mt-24 opacity-90 md:justify-center"
 >
-    <p class="ml-2">DevGigs &copy; 2024, All Rights reserved</p>
+    <p class="ml-2 text-xs py-3 sm:py-0 sm:text-base">DevGigs &copy; 2024, All Rights reserved</p>
 
     <a
         href="/listings/create"
-        class="absolute right-10 bg-black text-white py-2 px-5"
+        class="sm:absolute right-10 bg-black text-white py-2 px-5"
         >Post a job</a
     >
 </footer>

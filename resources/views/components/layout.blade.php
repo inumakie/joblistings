@@ -94,23 +94,23 @@
         <nav class="flex justify-between items-center mb-4">
             <a href="/" class='ml-2'
                 ><img class="w-24" src="{{asset('images/logo.png')}}" alt="" class="logo"/></a>
-            <ul class="flex space-x-6 mr-6 text-lg">
+            <ul class="flex space-x-6 mr-6 text-base sm:text-lg">
 
                 @auth
-                <li>
-                    <span class="">Welcome, {{auth()->user()->name}}</span>
+                <li class="hidden sm:flex justify-center items-center">
+                    <span class="leading-tight text-center">welcome,<br> {{auth()->user()->name}}</span>
                 </li>
-                <li>
-                    <a href="/listings/manage" class="hover:text-purple-800"
-                        ><i class="fa-solid fa-gear"></i>
-                        Manage listings</a
-                    >
+                <li class="flex flex-col justify-center items-center">
+                    <i class="fa-solid fa-gear"></i>
+                    <a href="/listings/manage" class="hover:text-purple-800">
+                        Edit jobs
+                    </a>
                 </li>
-                <li>
-                    <form method="POST" action="/logout" class="inline">
+                <li class="flex flex-col justify-center items-center">
+                    <form method="POST" action="/logout" class="inline flex flex-col justify-center items-center">
                         @csrf
+                        <i class="fa-solid fa-door-closed"></i>
                         <button type="submit" class='hover:text-purple-800'>
-                            <i class="fa-solid fa-door-closed"></i>
                             Logout
                         </button>
 
@@ -119,12 +119,12 @@
 
                 @else
                 <li>
-                    <a href="/register" class="hover:text-purple-800"
+                    <a href="/register" class="text-sm sm:text-lg hover:text-purple-800"
                         ><i class="fa-solid fa-user-plus"></i> Register</a
                     >
                 </li>
                 <li>
-                    <a href="/login" class="hover:text-purple-800"
+                    <a href="/login" class="text-sm sm:text-lg hover:text-purple-800"
                         ><i class="fa-solid fa-arrow-right-to-bracket"></i>
                         Login</a>
                 </li>
